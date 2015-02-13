@@ -10,7 +10,7 @@
 		CLASS_ANIM_REMOVE = 1;
 
 	// Check we have velocity and the UI pack
-	if (!$.Velocity || !$.Velocity.RegisterEffect) {
+	if (typeof Velocity === undefined || typeof Velocity.RegisterEffect === undefined) {
 		throw "Velocity and Velocity UI Pack plugin required, please include the relevant JS files. Get Velocity with: bower install velocity";
 	}
 
@@ -155,7 +155,7 @@
 			}
 
 			var cancel = queueFn(event, $el[0], done, function(elements, done) {
-				$(elements).velocity(animation, opts);
+				Velocity(elements, animation, opts)
 			});
 
 			return function onClose(cancelled) {

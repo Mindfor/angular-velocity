@@ -1,7 +1,7 @@
 {
-  "name": "angular-velocity",
+  "name": "angular-velocity-native",
   "version": "0.2.3",
-  "main": "angular-velocity.min.js",
+  "main": "angular-velocity.js",
   "authors": [
     "Christopher Wyllie <cgwyllie@gmail.com>"
   ],
