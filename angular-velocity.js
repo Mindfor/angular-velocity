@@ -106,7 +106,7 @@
 	function makeCancelFunctionFor($el) {
 		return function (cancel) {
 			if (cancel) {
-				$el.velocity('stop');
+				Velocity($el, 'stop');
 			}
 		};
 	}
@@ -117,7 +117,7 @@
 
 			var opts = getVelocityOpts($parse, $el, done);
 
-			$el.velocity(animation, opts);
+			Velocity($el, animation, opts);
 
 			return makeCancelFunctionFor($el);
 		};
@@ -136,7 +136,7 @@
 
 				opts = getVelocityOpts($parse, $el, done);
 
-				$el.velocity(animation, opts);
+				Velocity($el, animation, opts);
 
 				return makeCancelFunctionFor($el);
 			}
