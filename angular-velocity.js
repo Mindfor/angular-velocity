@@ -211,7 +211,7 @@
 	}
 
 	// Use the factories to define animations for all velocity's sequences
-	angular.forEach($.Velocity.RegisterEffect.packagedEffects, function (_, animation) {
+	angular.forEach(Velocity.RegisterEffect.packagedEffects, function (_, animation) {
 		var selector = '.' + animationToClassName(animation),
 			oppositesSelector = '.' + animationToOppositesClassName(animation);
 
